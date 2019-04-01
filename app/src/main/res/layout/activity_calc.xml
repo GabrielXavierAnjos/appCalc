@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.aluno.calc.Calc"
+    tools:layout_editor_absoluteY="81dp">
+
+    <EditText
+        android:id="@+id/editTextn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@+id/editTextn1"
+        app:layout_constraintTop_toBottomOf="@+id/editTextn1" />
+
+    <Button
+        android:id="@+id/buttonmais"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="16dp"
+        android:text="+"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonmenos"
+        app:layout_constraintEnd_toStartOf="@+id/buttonmenos"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonvezes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="17dp"
+        android:text="x"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonmenos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonmenos" />
+
+    <Button
+        android:id="@+id/buttonmenos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="44dp"
+        android:layout_marginTop="47dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/buttonvezes"
+        app:layout_constraintStart_toEndOf="@+id/buttonmais"
+        app:layout_constraintTop_toBottomOf="@+id/editTextn2" />
+
+    <Button
+        android:id="@+id/buttonac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:text="AC"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonigual"
+        app:layout_constraintEnd_toStartOf="@+id/buttonigual" />
+
+    <TextView
+        android:id="@+id/textViewresult"
+        android:layout_width="216dp"
+        android:layout_height="26dp"
+        android:layout_marginBottom="63dp"
+        android:layout_marginTop="66dp"
+        android:text="Resultado: "
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonac" />
+
+    <Button
+        android:id="@+id/buttonigual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="67dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="48dp"
+        android:text="="
+        app:layout_constraintEnd_toEndOf="@+id/buttonvezes"
+        app:layout_constraintStart_toStartOf="@+id/buttonmenos"
+        app:layout_constraintTop_toBottomOf="@+id/buttonvezes" />
+</android.support.constraint.ConstraintLayout>
